@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletim Econômico da Batata no RS – Junho 2025 (Super Detalhado)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F9FA; /* Light Gray */
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px; /* Increased max-width for more detail */
+            margin-left: auto;
+            margin-right: auto;
+            height: 380px; /* Adjusted height */
+            max-height: 550px; /* Adjusted max-height */
+            padding: 1rem;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 450px; /* Adjusted height for larger screens */
+            }
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .kpi-card {
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .kpi-card:hover {
+            transform: translateY(-5px);
+        }
+        .flow-step {
+            background-color: #A5C4D6; /* Light Blue */
+            color: #423224; /* Dark Brown */
+            border-radius: 0.5rem;
+            padding: 0.75rem 1.25rem;
+            text-align: center;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .flow-arrow {
+            color: #83A668; /* Green */
+            font-size: 2rem;
+            margin: 0.5rem 0;
+        }
+        .detail-item {
+            display: flex;
+            align-items: flex-start;
+            background-color: #f0f4f8; /* Lighter blue-gray for details */
+            border-radius: 0.5rem;
+            padding: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+        .detail-icon {
+            font-size: 1.8rem;
+            margin-right: 0.75rem;
+            color: #423224;
+        }
+        .detail-text h4 {
+            font-weight: 600;
+            color: #423224;
+            margin-bottom: 0.2rem;
+        }
+        .detail-text p {
+            font-size: 0.875rem;
+            color: #555;
+        }
+        .llm-button {
+            background-color: #F0941C; /* Orange */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: background-color 0.2s;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .llm-button:hover {
+            background-color: #e0840c; /* Darker Orange */
+        }
+        .loading-spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid #fff;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            margin-left: 0.5rem;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Chosen Color Palette: A blend of Energetic & Playful and Brilliant Blues.
+         Primary/Text: #423224 (Dark Brown)
+         Accent 1: #83A668 (Green)
+         Accent 2: #F0941C (Orange)
+         Accent 3: #A5C4D6 (Light Blue)
+         Accent 4: #AB9A6F (Tan)
+         Background: #F8F9FA (Light Gray)
+    -->
+
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-4 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold" style="color: #423224;">Boletim Econômico da Batata</h1>
+            <p class="text-lg" style="color: #83A668;">Análise Super Detalhada do Setor no Rio Grande do Sul – Junho de 2025</p>
+            <p class="text-sm text-gray-500 mt-2">Grupo de Economia Rural – Universidade Federal do Rio Grande do Sul</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section id="introduction" class="mb-12 card">
+            <h2 class="text-2xl font-bold text-center mb-4" style="color: #423224;">1. Introdução: Um Olhar Aprofundado na Bataticultura Gaúcha</h2>
+            <p class="text-gray-700 leading-relaxed">
+                Este boletim tem como finalidade apresentar uma análise atualizada e abrangente da cadeia produtiva da batata no estado do Rio Grande do Sul. O documento aborda aspectos cruciais como a dinâmica da produção, o comportamento do mercado e dos preços, a estrutura de custos envolvida no cultivo, os padrões de consumo emergentes, as inovações tecnológicas que moldam o setor e as perspectivas futuras para a cultura. Ao oferecer uma visão integrada e detalhada da cadeia de valor da batata, o relatório visa fornecer um entendimento holístico do cenário econômico atual e das tendências que afetam os produtores e demais agentes.
+            </p>
+            <p class="text-gray-700 leading-relaxed mt-4">
+                O público-alvo deste boletim é diversificado, incluindo produtores rurais que buscam informações para otimizar suas operações, estudantes e técnicos que necessitam de dados atualizados para pesquisa e aplicação prática, e profissionais do setor agropecuário em geral, que dependem de análises aprofundadas para tomadas de decisão estratégicas. A bataticultura desempenha um papel significativo na economia agrícola do Rio Grande do Sul, contribuindo para a segurança alimentar e a geração de renda no meio rural. Assim, a compreensão de seu estado atual e das projeções futuras é fundamental para o desenvolvimento sustentável do setor e para a resiliência econômica regional.
+            </p>
+        </section>
+
+        <section id="kpis" class="mb-12">
+            <h2 class="text-2xl font-bold text-center mb-6" style="color: #423224;">2. Principais Indicadores do Mês: Um Cenário Dinâmico</h2>
+            <p class="max-w-4xl mx-auto text-center text-gray-700 mb-8 leading-relaxed">
+                O mês de junho de 2025 apresentou movimentos importantes nos indicadores do setor da batata no Rio Grande do Sul, refletindo um ambiente de mercado complexo e em constante evolução.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="kpi-card card">
+                    <p class="text-5xl font-bold" style="color: #F0941C;">↑</p>
+                    <p class="text-2xl font-semibold mt-2" style="color: #F0941C;">+8,5%</p>
+                    <p class="text-gray-600 mt-1">Preço no atacado em relação a maio. Indicativo de oferta restrita ou demanda aquecida, mas com cautela devido à volatilidade.</p>
+                </div>
+                <div class="kpi-card card">
+                    <p class="text-5xl font-bold" style="color: #83A668;">→ </p>
+                    <p class="text-2xl font-semibold mt-2" style="color: #83A668;">Vacaria</p>
+                    <p class="text-gray-600 mt-1">Mantém-se como principal polo produtor, consolidando sua relevância regional e infraestrutura.</p>
+                </div>
+                <div class="kpi-card card">
+                    <p class="text-5xl font-bold text-red-500">↓</p>
+                    <p class="text-2xl font-semibold mt-2 text-red-500">Custo</p>
+                    <p class="text-gray-600 mt-1">Aumento nos custos de produção, impulsionado pela alta dos fertilizantes, pressionando as margens.</p>
+                </div>
+                <div class="kpi-card card">
+                    <p class="text-5xl font-bold" style="color: #A5C4D6;">★</p>
+                    <p class="text-2xl font-semibold mt-2" style="color: #A5C4D6;">Inovação</p>
+                    <p class="text-gray-600 mt-1">Nova variedade resistente à seca com potencial para elevar a produtividade e sustentabilidade hídrica.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="producao" class="mb-12">
+            <h2 class="text-2xl font-bold text-center mb-6" style="color: #423224;">3. Produção no RS: Panorama Geral e Projeções</h2>
+            <p class="max-w-4xl mx-auto text-center text-gray-700 mb-8 leading-relaxed">
+                O Rio Grande do Sul é um ator fundamental na produção de batatas no Brasil, destacando-se tanto na cultura da batata-doce quanto na da batata-inglesa. A coexistência da batata-doce, frequentemente associada à subsistência, com a batata-inglesa, uma cultura comercial com projeções de crescimento robusto, revela um sistema agrícola dual no Rio Grande do Sul.
+            </p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-4 text-center" style="color: #423224;">Batata-Inglesa: Produção e Projeções de Crescimento</h3>
+                     <div class="chart-container">
+                        <canvas id="producaoInglesaChart"></canvas>
+                    </div>
+                    <p class="text-gray-600 mt-4 text-sm leading-relaxed">
+                        Entre 2020 e 2022, o RS teve produção média anual de 426,9 mil toneladas, sendo o 4º maior produtor nacional, superado apenas por Minas Gerais, Paraná e São Paulo (que juntos concentram 82% da produção brasileira). Em 2023, a área colhida foi de aproximadamente 16,9 mil hectares, resultando em uma produção de 468,0 mil toneladas. Para 2025, projeta-se um aumento de 17,6% na produção, atingindo 522,4 mil toneladas, com rendimento médio de 27.668 kg/ha. Os principais municípios produtores são São Francisco de Paula (103,8 mil t/ano), Bom Jesus (79,2 mil t/ano) e São José dos Ausentes (61,6 mil t/ano). O cultivo é praticado em propriedades familiares e em unidades de produção empresarial, indicando a diversidade de escalas e tecnologias empregadas.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-4 text-center" style="color: #423224;">Batata-Doce: Liderança Nacional e Relevância Regional</h3>
+                    <div class="chart-container">
+                        <canvas id="producaoDoceChart"></canvas>
+                    </div>
+                     <p class="text-gray-600 mt-4 text-sm leading-relaxed">
+                        A batata-doce, cultura de subsistência, é cultivada em todo o Brasil, com maior presença nas regiões Sul, Sudeste e Nordeste. Entre 2020 e 2022, o RS foi o líder nacional na produção de batata-doce, com média de 152,9 mil toneladas anuais (18% da produção brasileira). Mais da metade dessa produção vem do centro-sul do estado, com Mariana Pimentel sendo o principal produtor gaúcho (15,3 mil t/ano). Sua importância econômica é crescente com a demanda por alimentos saudáveis e minimamente processados, e sua resiliência a diferentes condições de solo e clima a torna uma opção viável para pequenos produtores e para a diversificação de culturas.
+                    </p>
+                </div>
+                <div class="lg:col-span-2 card">
+                    <h3 class="text-xl font-bold mb-4 text-center" style="color: #423224;">Rendimento Médio da Batata-Inglesa (2023-2025)</h3>
+                    <div class="chart-container">
+                        <canvas id="rendimentoInglesaChart"></canvas>
+                    </div>
+                    <p class="text-gray-600 mt-4 text-sm leading-relaxed text-center">
+                        O gráfico acima ilustra a evolução do rendimento médio por hectare da batata-inglesa no Rio Grande do Sul, mostrando a melhoria nas práticas de cultivo e a adoção de variedades mais produtivas. A projeção para 2025 indica uma recuperação do rendimento para 27.668 kg/ha após uma leve queda para 25.030 kg/ha em 2024, que pode ter sido influenciada por fatores climáticos ou fitossanitários.
+                    </p>
+                </div>
+                <div class="lg:col-span-2 card">
+                    <h3 class="text-xl font-bold mb-4 text-center" style="color: #423224;">Produção Total de Batata-Inglesa no RS (2023-2025)</h3>
+                    <div class="chart-container">
+                        <canvas id="producaoTotalInglesaChart"></canvas>
+                    </div>
+                    <p class="text-gray-600 mt-4 text-sm leading-relaxed text-center">
+                        Este gráfico demonstra a evolução da produção total da batata-inglesa no estado. Em 2023, a produção foi de 468,0 mil toneladas. Para 2024, houve uma pequena retração para 444,2 mil toneladas, mas a projeção para 2025 é de um crescimento robusto para 522,4 mil toneladas, impulsionada tanto pela expansão da área quanto pela melhoria dos rendimentos. Este aumento expressivo na oferta para 2025 pode gerar pressões de baixa nos preços, exigindo um monitoramento cuidadoso da capacidade de absorção do mercado.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="mercado" class="mb-12 card">
+            <h2 class="text-2xl font-bold text-center mb-6" style="color: #423224;">4. Mercado e Comportamento dos Preços: Desafios e Flutuações</h2>
+            <p class="max-w-4xl mx-auto text-center text-gray-700 mb-8 leading-relaxed">
+                O mercado da batata no RS é caracterizado por sua suscetibilidade a diversos fatores exógenos, que contribuem para a instabilidade e volatilidade dos preços. Dentre os principais influenciadores, destacam-se a instabilidade climática, as variações na oferta (tanto em nível local quanto nacional) e os custos logísticos inerentes à distribuição. Esses elementos combinados resultam em um ambiente de incerteza para os agentes da cadeia.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h3 class="text-xl font-bold mb-4" style="color: #423224;">Preços Atuais na CEASA/RS (23 de Junho de 2025)</h3>
+                    <div class="flex justify-around text-center mb-6">
+                        <div>
+                            <p class="text-lg font-semibold" style="color: #83A668;">Batata Branca</p>
+                            <p class="text-3xl font-bold" style="color: #83A668;">R$ 3,00/kg</p>
+                            <p class="text-sm text-gray-500">(Variação: R$ 2,50 a R$ 3,75)</p>
+                        </div>
+                        <div>
+                            <p class="text-lg font-semibold" style="color: #F0941C;">Batata-Doce</p>
+                            <p class="text-3xl font-bold" style="color: #F0941C;">R$ 2,50/kg</p>
+                            <p class="text-sm text-gray-500">(Variação: R$ 2,00 a R$ 2,50)</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        A volatilidade dos preços representa um risco significativo para a receita dos produtores, exigindo estratégias de gestão de risco e um monitoramento contínuo do mercado. É crucial notar que classificações de produtos e fontes de dados podem gerar pequenas discrepâncias nos valores, como a diferença observada com dados do IEA para "Batata Comum Lavada" (R$ 1,83/kg em 30/06/2025). Essa variação pode ser explicada por diferentes qualidades ou tipos de batata comercializados, ou por flutuações diárias.
+                    </p>
+                </div>
+                <div>
+                     <div class="chart-container">
+                        <canvas id="precosChart"></canvas>
+                    </div>
+                    <p class="text-center text-sm text-gray-500 mt-2">Série histórica ilustrativa do preço da batata branca no último ano, demonstrando a volatilidade do mercado. Dados reais podem variar conforme fontes e classificações.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="custos" class="mb-12">
+            <h2 class="text-2xl font-bold text-center mb-6" style="color: #423224;">5. Estrutura de Custos e Rentabilidade: Otimizando a Margem</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="card flex flex-col justify-center">
+                    <h3 class="text-xl font-bold mb-4" style="color: #423224;">Análise Detalhada de Custos e Rentabilidade</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        A rentabilidade da bataticultura depende de uma gestão eficiente dos custos. Os principais componentes incluem insumos agrícolas essenciais como sementes, fertilizantes, defensivos agrícolas e mão de obra. O aumento recente no preço dos fertilizantes, por exemplo, impacta diretamente a viabilidade econômica do cultivo, exigindo que os produtores busquem alternativas como a otimização da adubação ou o uso de biofertilizantes.
+                    </p>
+                    <p class="text-gray-700 mt-4 leading-relaxed">
+                        A média estimada para o custo por hectare é de R$ 18.500,00, com uma receita bruta projetada de R$ 25.000,00, resultando em uma margem líquida estimada de R$ 6.500,00/ha. Produtores que investem em tecnologia e manejo integrado tendem a alcançar melhores resultados. Programas como o Pronaf oferecem suporte financeiro crucial aos pequenos produtores, garantindo acesso a crédito e capacidade de investimento em tecnologias e práticas que podem melhorar sua produtividade e resiliência.
+                    </p>
+                    <p class="text-gray-700 mt-4 leading-relaxed text-sm">
+                        **Desafios na Produtividade (Safra 2024/2025):** A produtividade em 2025 foi afetada por fatores como o surgimento de *Alternaria Solani* (pinta-preta) e condições climáticas desfavoráveis (clima mais quente, menor amplitude térmica e pouca chuva), que prejudicaram o desenvolvimento fisiológico das plantas e aceleraram o ciclo da cultura. Atrasos no plantio na expectativa de melhores preços resultaram em mercado saturado e problemas de qualidade (escurecimento da pele dos tubérculos), levando a prejuízos e dificuldades de escoamento. A produtividade em Bom Jesus, por exemplo, embora inicialmente boa (37 t/ha), caiu para cerca de 35 t/ha em colheitas posteriores devido a esses fatores.
+                    </p>
+                </div>
+                 <div class="card">
+                    <h3 class="text-xl font-bold mb-4 text-center" style="color: #423224;">Composição Estimada do Custo por Hectare</h3>
+                    <div class="chart-container">
+                        <canvas id="custosChart"></canvas>
+                    </div>
+                    <p class="text-center text-sm text-gray-500 mt-2">Distribuição percentual ilustrativa dos custos de produção. Valores exatos podem variar significativamente por região, tecnologia e escala de produção.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="inovacao" class="mb-12 card">
+            <h2 class="text-2xl font-bold text-center mb-6" style="color: #423224;">6. Padrões de Consumo e Inovações: Adaptando-se ao Futuro</h2>
+             <p class="max-w-4xl mx-auto text-center text-gray-700 mb-8 leading-relaxed">
+                O mercado consumidor de batata no Rio Grande do Sul e no Brasil tem demonstrado uma evolução notável, com uma tendência crescente no consumo de batata processada e orgânica. Paralelamente, inovações tecnológicas são cruciais para a adaptação da bataticultura aos desafios ambientais e às demandas do mercado.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-center" style="color: #423224;">Tendências de Consumo</h3>
+                    <div class="space-y-4">
+                        <div class="detail-item">
+                            <span class="detail-icon">🍟</span>
+                            <div class="detail-text">
+                                <h4 style="color: #F0941C;">Produtos Processados</h4>
+                                <p>Cresce a busca por conveniência, como batatas chips e pré-cozidas. Consumo per capita anual: 2kg de batata palito, 0,25kg de batata chips. A indústria de processamento representa uma oportunidade crescente para a produção.</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">🌿</span>
+                            <div class="detail-text">
+                                <h4 style="color: #83A668;">Produtos Orgânicos</h4>
+                                <p>36% dos brasileiros consumiram orgânicos em 2023 (aumento de 16% vs. 2021). Hortifrutis representam 75% dos preferidos. Saúde é o principal motivador (50% buscam "melhorar a saúde"). A região Sul contribui com 17% dos consumidores de orgânicos.</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">🌎</span>
+                            <div class="detail-text">
+                                <h4 style="color: #A5C4D6;">Consumo Per Capita</h4>
+                                <p>Média anual de 7-10 kg de batata fresca. A Região Sul do Brasil apresenta o maior consumo per capita de batata, indicando um mercado doméstico robusto e com potencial de crescimento para produtos frescos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-center" style="color: #423224;">Inovações e Variedades</h3>
+                    <div class="space-y-4">
+                        <div class="detail-item">
+                            <span class="detail-icon">💧</span>
+                            <div class="detail-text">
+                                <h4 style="color: #A5C4D6;">Resistência Climática</h4>
+                                <p>Variedades como BRS Ana e BRS Clara mostram moderada tolerância à seca. A BRS F50, lançada em 2022, é adaptada para plantios de inverno, outono e primavera no Sul, com notável resistência a doenças foliares e adequação para cultivo orgânico.</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">🔬</span>
+                            <div class="detail-text">
+                                <h4 style="color: #AB9A6F;">Melhoramento Genético</h4>
+                                <p>Pesquisas da UFRGS identificam genes para tolerância a sal, frio e seca. A Embrapa desenvolve variedades para a indústria, como a BRS Potira (BRS F183), com alto teor de matéria seca (21%) para crocância na fritura e baixo teor de açúcares para evitar escurecimento.</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">🌱</span>
+                            <div class="detail-text">
+                                <h4 style="color: #83A668;">Bio-insumos e Bioeconomia</h4>
+                                <p>Exploração de bio-insumos, como o Auras, para aumentar a tolerância à seca em culturas. O potencial da batata-doce para a produção de etanol (pesquisa UFRGS) abre novas avenidas industriais e econômicas, diversificando o valor da cultura e estabilizando a demanda.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cadeia-produtiva" class="mb-12 card">
+            <h2 class="text-2xl font-bold text-center mb-6" style="color: #423224;">7. Cadeia Produtiva e Atuação Empresarial: Conectando o Campo ao Consumidor</h2>
+            <p class="max-w-4xl mx-auto text-center text-gray-700 mb-8 leading-relaxed">
+                A cadeia produtiva da batata no Rio Grande do Sul é um ecossistema complexo e interconectado, envolvendo uma vasta gama de agentes que trabalham para levar o produto do campo à mesa do consumidor. Essa rede inclui produtores primários (familiares e empresariais), cooperativas agrícolas, atacadistas, centrais de abastecimento como a CEASA/RS, e diversas agroindústrias que realizam o processamento e a agregação de valor aos produtos.
+            </p>
+            <div class="flex flex-col items-center space-y-4">
+                <div class="flow-step">Produtores (Familiares e Empresariais)</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">Cooperativas Agrícolas (Agregação, Suporte e Acesso a Mercados)</div>
+                <div class="flow-arrow">↓</div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-lg">
+                    <div class="flow-step bg-yellow-100 text-yellow-800">Atacadistas</div>
+                    <div class="flow-step bg-yellow-100 text-yellow-800">Agroindústrias (Processamento e Valor Agregado)</div>
+                </div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step bg-orange-100 text-orange-800">Centrais de Abastecimento (CEASA/RS)</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step bg-purple-100 text-purple-800">Varejo (Supermercados, Feiras Regionais, Hortifrutis) & Consumidor Final</div>
+            </div>
+            <p class="text-gray-700 mt-8 leading-relaxed text-center">
+                Empresas como a Agroindustrial Yoski (Vacaria/RS), com mais de 30 anos de experiência, são especializadas no plantio, colheita e comercialização de batatas in natura, batatas-semente e batatas para a indústria, garantindo alta qualidade. A rastreabilidade, impulsionada por regulamentações e demanda do consumidor, é facilitada por sistemas como o Sibraar (Embrapa), que utiliza tecnologia blockchain para monitorar o produto do campo ao consumidor, garantindo segurança e transparência.
+            </p>
+            <p class="text-gray-700 mt-4 leading-relaxed text-center">
+                As cooperativas agrícolas desempenham um papel fundamental no fortalecimento dos pequenos e médios produtores no Rio Grande do Sul. Elas funcionam como plataformas para a adoção de novas tecnologias e a abertura de novas oportunidades de negócios, permitindo que os associados se mantenham no campo e realizem investimentos. Cerca de 80% dos associados das cooperativas gaúchas são pequenos e médios produtores, predominantemente no ramo agropecuário. Esse modelo de organização é essencial para que os agricultores familiares possam acessar mercados maiores, obter insumos a custos mais competitivos e compartilhar conhecimentos e tecnologias, superando as barreiras naturais que limitam as economias de escala na agricultura.
+            </p>
+        </section>
+
+        <section id="perspectivas" class="mb-12 card">
+            <h2 class="text-2xl font-bold text-center mb-4" style="color: #423224;">8. Perspectivas para o Setor: Desafios e Oportunidades Futuras</h2>
+            <p class="max-w-4xl mx-auto text-gray-700 leading-relaxed text-center">
+                Para o segundo semestre de 2025, as projeções indicam uma tendência de estabilidade dos preços, com possibilidade de ajustes conforme o comportamento do clima e da oferta nacional. No entanto, o crescimento significativo projetado na produção de batata-inglesa para 2025 (17,6% de aumento) pode gerar pressões de baixa nos preços, exigindo um monitoramento cuidadoso da capacidade de absorção do mercado e estratégias de comercialização eficientes.
+            </p>
+            <p class="max-w-4xl mx-auto text-gray-700 leading-relaxed text-center mt-4">
+                A expectativa é de uma ampliação contínua do uso de tecnologias sustentáveis, melhorias na gestão da produção e maior valorização dos produtos com valor agregado. O setor enfrentará o desafio contínuo de navegar pela volatilidade climática e pela necessidade de equilibrar a oferta com a demanda. A resiliência dependerá da capacidade dos produtores de adaptar suas práticas agrícolas e de gestão aos cenários em constante mudança, buscando produtividade, qualidade e diferenciação. A pesquisa e o desenvolvimento de novas variedades e bio-insumos, juntamente com o apoio de programas governamentais como o Pronaf e a atuação das cooperativas, serão fundamentais para habilitar o crescimento sustentável do setor. A ênfase na produtividade, aliada à busca por valorização do produto por meio de qualidade e diferenciação, será a chave para a competitividade da bataticultura gaúcha no médio e longo prazo.
+            </p>
+        </section>
+
+        <section id="llm-strategies" class="mb-12 card">
+            <h2 class="text-2xl font-bold text-center mb-6" style="color: #423224;">✨ Sugestões de Estratégias para Produtores ✨</h2>
+            <p class="max-w-4xl mx-auto text-center text-gray-700 mb-6 leading-relaxed">
+                Com base nos dados e análises deste boletim, as seguintes estratégias práticas são sugeridas para os produtores de batata no Rio Grande do Sul para mitigar desafios e aproveitar oportunidades no segundo semestre de 2025:
+            </p>
+            <div id="strategiesOutput" class="mt-8 p-4 bg-gray-50 rounded-lg border border-gray-200 text-gray-700 leading-relaxed text-left">
+                <ol class="list-decimal list-inside space-y-2">
+                    <li>**Otimizar o uso de insumos, focando em fertilizantes:** Diante do aumento de custos, especialmente com fertilizantes (35% do total), revisar e otimizar a aplicação, talvez buscando compras coletivas via cooperativas ou estudando alternativas de manejo que reduzam a dependência.</li>
+                    <li>**Adotar variedades mais resistentes e adaptadas:** Para mitigar impactos de clima desfavorável (seca, calor) e doenças como Alternaria Solani, investir ou experimentar variedades resistentes (BRS Ana, Clara, F50 para seca) que podem garantir maior produtividade e qualidade sob estresse.</li>
+                    <li>**Buscar nichos de mercado como batata para processamento ou orgânica:** Aproveitar a tendência de consumo crescente nesses segmentos para diversificar canais de venda e reduzir a pressão de preço no mercado fresco, potencialmente utilizando variedades industriais (BRS Potira) ou convertendo parte da área para produção orgânica.</li>
+                    <li>**Melhorar manejo pós-colheita e buscar canais de comercialização mais estáveis:** Endereçar problemas de qualidade e escoamento aprimorando o manejo após a colheita e explorando a venda via cooperativas ou buscando contratos com compradores que valorizem a qualidade e ofereçam maior previsibilidade de escoamento.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="references" class="mb-12 card">
+            <h2 class="text-2xl font-bold text-center mb-4" style="color: #423224;">9. Referências</h2>
+            <ul class="list-disc list-inside text-gray-700 leading-relaxed max-w-3xl mx-auto">
+                <li>CEASA/RS</li>
+                <li>Conab</li>
+                <li>IBGE</li>
+                <li>Emater-RS</li>
+                <li>Cepea/Esalq</li>
+                <li>Embrapa</li>
+                <li>Artigos técnicos, entrevistas com produtores e especialistas.</li>
+            </ul>
+        </section>
+
+        <section id="about" class="mb-12 card">
+            <h2 class="text-2xl font-bold text-center mb-4" style="color: #423224;">10. Sobre o Boletim</h2>
+            <p class="max-w-4xl mx-auto text-gray-700 leading-relaxed text-center">
+                Este boletim foi elaborado por estudantes da disciplina de Economia Rural da Universidade Federal do Rio Grande do Sul, com base em dados oficiais e fontes confiáveis. Para mais informações ou contato, utilize os canais institucionais disponíveis.
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="bg-white mt-12 py-6">
+        <div class="container mx-auto px-6 text-center text-gray-600 text-sm">
+            <p class="font-bold">Boletim Econômico da Batata no Rio Grande do Sul – Junho de 2025</p>
+            <p>Análise Detalhadíssima para Produtores Rurais, Estudantes e Profissionais do Setor Agropecuário.</p>
+        </div>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                return Array.isArray(label) ? label.join(' ') : label;
+            };
+
+            const wrapLabel = (label) => {
+                const maxLength = 16;
+                if (label.length <= maxLength) return label;
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                words.forEach(word => {
+                    if ((currentLine + ' ' + word).length > maxLength && currentLine.length > 0) {
+                        lines.push(currentLine);
+                        currentLine = word;
+                    } else {
+                        currentLine = currentLine ? currentLine + ' ' + word : word;
+                    }
+                });
+                lines.push(currentLine);
+                return lines;
+            };
+            
+            const palette = {
+                blue: '#A5C4D6',
+                green: '#83A668',
+                orange: '#F0941C',
+                tan: '#AB9A6F',
+                darkBrown: '#423224'
+            };
+
+            const producaoInglesaLabels = ['São Francisco de Paula', 'Bom Jesus', 'São José dos Ausentes', 'Outros Municípios'].map(wrapLabel);
+            new Chart(document.getElementById('producaoInglesaChart'), {
+                type: 'bar',
+                data: {
+                    labels: producaoInglesaLabels,
+                    datasets: [{
+                        label: 'Produção Anual Média (mil t)',
+                        data: [103.8, 79.2, 61.6, (426.972 - 103.8 - 79.2 - 61.6)], // Total 2020-2022 avg
+                        backgroundColor: [palette.green, palette.orange, palette.blue, palette.tan],
+                        borderColor: [palette.green, palette.orange, palette.blue, palette.tan],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { callbacks: { title: tooltipTitleCallback } }
+                    },
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            title: { display: true, text: 'Mil Toneladas/Ano (Média 2020-2022)' }
+                        }
+                    }
+                }
+            });
+
+            const producaoDoceLabels = ['Mariana Pimentel', 'Outros Municípios'].map(wrapLabel);
+            new Chart(document.getElementById('producaoDoceChart'), {
+                type: 'bar',
+                data: {
+                    labels: producaoDoceLabels,
+                    datasets: [{
+                        label: 'Produção Anual Média (mil t)',
+                        data: [15.3, (152.959 - 15.3)], // Total 2020-2022 avg
+                        backgroundColor: [palette.orange, palette.green],
+                        borderColor: [palette.orange, palette.green],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { callbacks: { title: tooltipTitleCallback } }
+                    },
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            title: { display: true, text: 'Mil Toneladas/Ano (Média 2020-2022)' }
+                        }
+                    }
+                }
+            });
+
+            new Chart(document.getElementById('rendimentoInglesaChart'), {
+                type: 'line',
+                data: {
+                    labels: ['2023', '2024', '2025 (Projeção)'],
+                    datasets: [{
+                        label: 'Rendimento Médio (kg/ha)',
+                        data: [27693, 25030, 27668],
+                        fill: false,
+                        borderColor: palette.blue,
+                        tension: 0.1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { callbacks: { title: tooltipTitleCallback } }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            title: { display: true, text: 'Rendimento (kg/ha)' }
+                        },
+                        x: {
+                            title: { display: true, text: 'Ano' }
+                        }
+                    }
+                }
+            });
+
+            new Chart(document.getElementById('producaoTotalInglesaChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['2023', '2024', '2025 (Projeção)'],
+                    datasets: [{
+                        label: 'Produção Total (mil t)',
+                        data: [468.005, 444.156, 522.425],
+                        backgroundColor: [palette.green, palette.orange, palette.blue],
+                        borderColor: [palette.green, palette.orange, palette.blue],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { callbacks: { title: tooltipTitleCallback } }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: { display: true, text: 'Mil Toneladas' }
+                        },
+                        x: {
+                            title: { display: true, text: 'Ano' }
+                        }
+                    }
+                }
+            });
+
+            new Chart(document.getElementById('precosChart'), {
+                type: 'line',
+                data: {
+                    labels: ['Jun/24', 'Jul/24', 'Ago/24', 'Set/24', 'Out/24', 'Nov/24', 'Dez/24', 'Jan/25', 'Fev/25', 'Mar/25', 'Abr/25', 'Mai/25', 'Jun/25'],
+                    datasets: [{
+                        label: 'Preço Batata Branca (R$/kg)',
+                        data: [2.85, 2.90, 2.70, 2.65, 2.80, 2.90, 3.10, 3.20, 3.05, 2.95, 2.88, 2.77, 3.00],
+                        fill: true,
+                        backgroundColor: 'rgba(131, 166, 104, 0.2)', /* Green with opacity */
+                        borderColor: palette.green,
+                        tension: 0.1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { callbacks: { title: tooltipTitleCallback } }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            title: { display: true, text: 'Preço (R$/kg)' }
+                        }
+                    }
+                }
+            });
+
+            new Chart(document.getElementById('custosChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['Fertilizantes', 'Sementes', 'Defensivos', 'Mão de Obra', 'Outros Insumos/Operações'],
+                    datasets: [{
+                        label: 'Composição de Custo',
+                        data: [35, 25, 20, 15, 5],
+                        backgroundColor: [palette.orange, palette.green, palette.blue, palette.tan, palette.darkBrown],
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'top' },
+                        tooltip: { callbacks: { title: tooltipTitleCallback } }
+                    }
+                }
+            });
+        };
+    </script>
+</body>
+</html>
